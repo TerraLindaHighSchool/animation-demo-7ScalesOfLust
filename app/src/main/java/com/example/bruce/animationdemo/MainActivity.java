@@ -17,19 +17,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setwidgetID();
-        setAnimationsAndListener();
+        setWidgetID();
+        loadAnimations();
         listenForClick();
 
     }
 
-    protected void setwidgetID(){
+    protected void setWidgetID(){
         card = findViewById(R.id.imageView3);
         wobbleButton = findViewById(R.id.button_wobble);
         slideButton = findViewById(R.id.button_slide);
     }
 
-    private void setAnimationsAndListener(){
+    private void loadAnimations(){
         wobble = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.wobble);
         slideDown = AnimationUtils.loadAnimation(getApplicationContext(),
